@@ -1,7 +1,13 @@
 const express=require('express');
 const app=express();
+const path=require("path");
 
-app.use(express.static('../frontend/dist'));
+
+// const x=path.resolve();
+// console.log(x);
+
+app.use(express.static(path.join(__dirname,"../dist")));
+
 
 const data = [
     { name: "Ronaldo", profession: "Footballer" },
@@ -28,6 +34,11 @@ app.get("/api/data",async(req,res)=>{
         res.send(error);
     }
 })
+
+
+// app.get("*",(req,res)=>{
+//     res.sendFile(path.resolve(__dirname,"..","dist","index.html"));
+// })
 
 
 app.listen(4000,()=>{
