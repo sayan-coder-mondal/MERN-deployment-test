@@ -6,7 +6,7 @@ const path=require("path");
 // const x=path.resolve();
 // console.log(x);
 
-app.use(express.static(path.join(__dirname,"../dist")));
+app.use(express.static(path.join(__dirname,"../../frontend/dist")));
 
 
 const data = [
