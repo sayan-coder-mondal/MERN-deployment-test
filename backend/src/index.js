@@ -1,6 +1,7 @@
 const express=require('express');
 const app=express();
 
+app.use(express.static('../frontend/dist'));
 
 const data = [
     { name: "Ronaldo", profession: "Footballer" },
