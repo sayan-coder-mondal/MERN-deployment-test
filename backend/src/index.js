@@ -1,12 +1,14 @@
-const express=require('express');
+// const express=require('express');
+import express from "express";
 const app=express();
-const path=require("path");
+// const path=require("path");
+import path from 'path';
 
 
-// const x=path.resolve();
-// console.log(x);
+const __dirname=path.resolve();
+console.log("mkdffjfjfdj");
 
-app.use(express.static(path.join(__dirname,"../../frontend/dist")));
+console.log(__dirname);
 
 
 const data = [
@@ -25,7 +27,7 @@ const data = [
     { name: "Mary Kom", profession: "Boxer" },
     { name: "Neeraj Chopra", profession: "Javelin Thrower" },
     { name: "Greta Thunberg", profession: "Activist" }
-  ];
+];
 
 app.get("/api/data",async(req,res)=>{
     try {
@@ -36,9 +38,19 @@ app.get("/api/data",async(req,res)=>{
 })
 
 
-// Catch-all route to serve index.html for React routing
+
+app.use(express.static(path.join(__dirname,"/frontend/dist")));
+
+// const filePath = path.resolve(__dirname,"frontend", "dist", "index.html");
+// console.log('Serving frontend from: ', filePath);
+
 // app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'));
+//     res.sendFile(filePath, (err) => {
+//       if (err) {
+//         console.error('Error sending index.html:', err);
+//         res.status(500).send(err.message);
+//       }
+//     });
 //   });
 
 
