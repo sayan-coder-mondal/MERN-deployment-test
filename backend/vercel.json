@@ -1,21 +1,16 @@
 {
-    "instellCommand":"npm install --legacy-peer-deps",
     "version": 2,
     "name": "test-mern-deploy",
     "builds": [
         {
-            "src": "src/index.js",
+            "src": "backend/src/indexjs",
             "use": "@vercel/node"
-        },
-        {
-            "src": "src/**/*",
-            "use": "@vercel/static"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/"
+            "dest": "backend/src/index.js"
         }
     ]
 }
