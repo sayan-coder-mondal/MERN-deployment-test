@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'https://mern-deployment-test.vercel.app/',
+      '/api': 'http://localhost:4000',
     },
   },
 })

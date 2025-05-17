@@ -3,7 +3,7 @@
     "name": "test-mern-deploy",
     "builds": [
         {
-            "src": "backend/src/indexjs",
+            "src": "backend/src/index.js",
             "use": "@vercel/node"
         }
     ],

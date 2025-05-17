@@ -36,9 +36,10 @@ app.get("/api/data",async(req,res)=>{
 })
 
 
-// app.get("*",(req,res)=>{
-//     res.sendFile(path.resolve(__dirname,"..","dist","index.html"));
-// })
+// Catch-all route to serve index.html for React routing
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'));
+//   });
 
 
 app.listen(4000,()=>{
