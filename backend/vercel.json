@@ -1,4 +1,5 @@
 {
+    "instellCommand":"npm install --legacy-peer-deps",
     "version": 2,
     "name": "test-mern-deploy",
     "builds": [
